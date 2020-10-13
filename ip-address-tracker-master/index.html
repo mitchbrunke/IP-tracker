@@ -5,30 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<section class="top-half">
 
-  IP Address Tracker
+  <div class="content-container">
+ <h3 id="heading">IP Address Tracker</h3> 
 
-  Search for any IP address or domain
+  <form>
+    <input type="text" name="search" id="search" placeholder="Search for any IP address or domain">
+   
+<Button>
+    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+  </Button>
+  </form>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+<div class="details">
+  <div class="item"><h4>IP Address</h4>
+  <p>1300 6555 06</p></div>
+  <div class="item"><h4>Location</h4>
+    <p>1300 6555 06</p></div>
+    <div class="item"><h4>Timezone</h4>
+      <p>1300 6555 06</p></div>
+      <div class="item"><h4>UTC</h4>
+        <p>1300 6555 06</p></div>
+        <div class="item"><h4>ISP</h4>
+          <p>1300 6555 06</p></div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+</div>
+
+</div>
+</section>
+
+<section class="map">
+
+</section>
 </body>
 </html>

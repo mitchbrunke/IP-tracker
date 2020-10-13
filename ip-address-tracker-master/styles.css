@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.top-half {
+  height: 40vh;
+  background: url(/images/pattern-bg.png);
+  background-size: cover;
+}
+
+.content-container {
+  text-align: center;
+}
+
+#heading {
+  padding: 3rem 0rem 2rem 0rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: white;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 25vw;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px 0 0 15px;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background-color: hsl(0, 0%, 17%);
+  cursor: pointer;
+}
+
+.details {
+  position: relative;
+  top: 7.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: white;
+  width: 85vw;
+  height: 20vh;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.map {
+  height: 60vh;
+  background-color: grey;
+}
