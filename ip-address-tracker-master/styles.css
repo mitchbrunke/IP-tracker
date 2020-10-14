@@ -7,7 +7,7 @@
 
 .top-half {
   height: 40vh;
-  background: url(/images/pattern-bg.png);
+  background: url("../images/pattern-bg.png");
   background-size: cover;
 }
 
