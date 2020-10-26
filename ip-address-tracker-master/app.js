@@ -1,33 +1,36 @@
-console.log("hello there");
-const key = "at_0O4oUtIPLre3fboFvRVbHdhoWX0mS";
-const endpoint =
-  "https://geo.ipify.org/api/v1?apiKey=at_0O4oUtIPLre3fboFvRVbHdhoWX0mS&ipAddress=8.8.8.8";
+const apiKey = "at_0O4oUtIPLre3fboFvRVbHdhoWX0mS";
 const userInput = document.getElementById("search");
 const submitBtn = document.querySelector("button");
+const ipValue = document.querySelector("#Ip-result");
+const location = 
 
-// // ?apiKey=at_0O4oUtIPLre3fboFvRVbHdhoWX0mS&ipAddress=103.74.67.28
-//api - fetch & update dom
-fetch(endpoint, {
-  method: "GET",
-})
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    let info = data;
-    console.log(info.location.country);
-  })
-  .catch((err) => console.log("Error"));
+const ip = userInput.value;
 
-// //use form input to update url and dom
+//api - fetch
+const getIp = async (ip) => {
+  //creating the endpoint
+  const base = "https://geo.ipify.org/api/v1";
+  const query = `?apiKey=${apiKey}&ipAddress=${ip}`;
+  // fetching data
+  const response = await fetch(base + query);
+  const data = await response.json();
+  return data;
+};
 
-// //dom manipulation
+//update ui
 
-// //maps - update map based on the input
+const updateUi = (data) => {
+  console.log(data.location);
+  ipValue.innerText = `${data.ip}`;
+};
 
-// const ipKey = "at_0O4oUtIPLre3fboFvRVbHdhoWX0mS";
-
+//event listener to catch IP
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(userInput.value);
+
+  const ip = userInput.value.trim();
+  //invoking function to update ui
+  getIp(ip)
+    .then((data) => updateUi(data))
+    .catch((err) => console.log(err));
 });
